@@ -8,6 +8,11 @@ LHPControl is a front-end Windows app for CryptoGnome's LickHunterPro bot. It is
 - Set a maximum of open orders to prevent too many being opened at a time.
 - Open order isolation - When X percent of your wallet balance gets hit by open orders, only the open order pairs will be traded until the percentage drops below X.
 - Restarts the processes every N minutes, as well as when a certain threshhold of memory usage is reached to mitigate the websocket leackage
+- Displays logs and error logs
+- Displays the IP and Country of the connection to let the user make sure they are not connecting from the US
+- Displays the versions of the bot and LHPControl apps
+- Displays user account info from Binance
+- Displays cpu/memory utilization
 
 **This release doesn't work for Bybit yet.**
 
