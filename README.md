@@ -38,7 +38,8 @@ LHPControl is a front-end Windows app for CryptoGnome's LickHunterPro bot. It is
   - $tradePairs = "1" **Choose 1, 2, 3 or 4, depending what chart your wan't to base your pairs on (1. Top 10 burned by Volume - 24h, 2. Top 10 by Liq-Events - 24h, 3. Average Liq-Volume in USD - 24h, 4. Average Liq-Amount - 24h)**
   - $fundingRateThreshold = **$true or $false, default is $false, set to $true if you don't want to trade pairs with a high Funding Rate**
   - $maxFundingRate = **For explanation about funding rate you can read this https://www.binance.com/en/support/faq/360033525031**  
-  - tradingEnabled = if unchecked, will not run WebSocket process.
+  - $tradingEnabled = if unchecked, will not run WebSocket process.
+  - $refreshTime = the interval for script getting new values for coins.json (default: 5)
 
 # Coin variables:
   - $longOffset = "2.7" **explanation**
