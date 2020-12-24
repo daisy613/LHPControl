@@ -11,24 +11,25 @@
 
 ## Features
 
-*Dynamic liquidation stats analysis: LHPC queries and analyses the current liquidation streams (from liquidationsniper.com) and updates the coins file with coins with most profitable liquidation statistics. Four different types of liquidation stats are available to chose.
-*Trading Modes: trade either with 1) a static list of coins you have manually created, 2) a custom whitelist and the liquidation stats analysis, or 3) a custom blacklist and the liquidation stats analysis, including the ability to restrict the coins based on their trading age.
-* New coins sync: when new coins become available, they are automatically added to the list of available coins.
-* Account info: Displays updated account info, current P&L, current open positions with individual P&L, cross/isolation info and leverage.
-* Current pairs: displays the list of trading pairs selected by the algorithm (coins.json).
-* Isolation Percentage Mode: Open Order Isolation Percentage mode allows you to specify the margin wallet percentage at which the bot should stop opening new orders and only manage the currently opened ones.
-* Maximum open orders: you can specify the maximum number of open orders after which the bot will enter the aforementioned Isolation mode.
-* Log monitoring: the current logs are displayed and separated into Output and Error logs for Profit and Websocket processes, similar to the PM2 Monitor dashboard, which can also be opened at a click of a button.
-* Settings backup: backs up the settings.json file when settings change.
-* Upgrade checking: LHPC checks for an available upgrade when it starts and allows you to download an upgrade.
-* DebugDump: debug information can be generated for your issue submissions. No personal information like keys or secrets is generated.
-* Clear coin list: the list of available coins is displayed with all the currently trading coins in black and disabled coins in gray. Click on the coin to customize its settings.
-* Bulk coin updates: Update all coins at the same time with the same settings.
-* GeoIP: Displays your geo IP information and warns you if your IP is US-based.
-* Default settings: if the bot root directory does not contain any settings files, creates them with default settings.
-* CPU/Memory stats: displays the current processor and memory utilisation per each process.
+* **Dynamic liquidation stats analysis:** LHPC queries and analyses the current liquidation streams (from liquidationsniper.com) and updates the coins file with coins with most profitable liquidation statistics. Four different types of liquidation stats are available to chose.
+* **Trading Modes:** trade either with 1) a static list of coins you have manually created, 2) a custom whitelist and the liquidation stats analysis, or 3) a custom blacklist and the liquidation stats analysis, including the ability to restrict the coins based on their trading age.
+* **New coins sync:** when new coins become available, they are automatically added to the list of available coins.
+* **Account info:** Displays updated account info, current P&L, current open positions with individual P&L, cross/isolation info and leverage.
+* **Current pairs:** displays the list of trading pairs selected by the algorithm (coins.json).
+* **Isolation Percentage Mode:** Open Order Isolation Percentage mode allows you to specify the margin wallet percentage at which the bot should stop opening new orders and only manage the currently opened ones.
+* **Maximum open orders:** you can specify the maximum number of open orders after which the bot will enter the aforementioned Isolation mode.
+* **Log monitoring:** the current logs are displayed and separated into Output and Error logs for Profit and Websocket processes, similar to the PM2 Monitor dashboard, which can also be opened at a click of a button.
+* **Settings backup:** backs up the settings.json file when settings change.
+* **Upgrade checking:** LHPC checks for an available upgrade when it starts and allows you to download an upgrade.
+* **DebugDump:** debug information can be generated for your issue submissions. No personal information like keys or secrets is generated.
+* **Clear coin list:** the list of available coins is displayed with all the currently trading coins in black and disabled coins in gray. Click on the coin to customize its settings.
+* **Bulk coin updates:** Update all coins at the same time with the same settings.
+* **GeoIP:** Displays your geo IP information and warns you if your IP is US-based.
+* **Default settings:** if the bot root directory does not contain any settings files, creates them with default settings.
+* **CPU/Memory stats:** displays the current processor and memory utilisation per each process.
 
 ### Coming features:
+
 * Bybit trading.
 * Automatically update coins from Cross to Isolated mode.
 * Remove delisted coins.
