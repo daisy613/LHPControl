@@ -1,6 +1,6 @@
 # LHPControl
 
-![LHCP](https://i.imgur.com/QXuTuwN.png)
+![LHCP](https://i.ibb.co/kJPFwxz/LHPC-screens.png)
 
 ## Description
 
