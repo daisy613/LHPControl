@@ -61,26 +61,25 @@
   - **leverage**: Set this on exchange to ISOLATED then make it match below to help calculate order sizing. Suggested leverage for this bot is 3-5x, please note with higher leverage this bot becomes more risky.
   - **lickValue**: Set this to the size of liquidations you want to hunt for. This will always be a $USD value.
   - **takeProfit & stopLoss**: Take Profit & Stop Loss Values, these values are a percentage % and are based off your average entry price. Please Adjust to your risk levels. Take Profit is a LIMIT - REDUCE ONLY ORDER. STOP LOSS is a active MARKET ORDER that is not placed in the books. To disable set the Stop Loss amount at a high value.
-  - **DCA**: Dollar Cost Averaging: This allows the bot to view the bots draw down when in an open position and adjust the buy qty in REALTIME when there is a liquidation. There are two things this looks at, one your current level, ex: levelOne = 2. This is a percent value, if your position is less than this it will use the autoQty value to make a buy/sell on liquidation. Ff it is past this value, lets say the position -2.5% away from your average entry it will then use multiplierOne value and multiple you autoQty value by this. So lets say your normal buy was 100 contracts, your multiplierOne = 2, your new buy value would be 200 contracts. So to recap your level is % value away from your average entry in drawdown that it will activate a higher order size. Your multiplier is the value you multiple your original qty with.
+  - **DCA**: Dollar Cost Averaging: This allows the bot to view the bots draw down when in an open position and adjust the buy qty in REALTIME when there is a liquidation. There are two things this looks at, one your current level, ex: levelOne = 2. This is a percent value, if your position is less than this it will use the autoQty value to make a buy/sell on liquidation. If it is past this value, lets say the position -2.5% away from your average entry it will then use multiplierOne value and multiple you autoQty value by this. So lets say your normal buy was 100 contracts, your multiplierOne = 2, your new buy value would be 200 contracts. So to recap, your level is % value away from your average entry in drawdown that it will activate a higher order size. Your multiplier is the value you multiple your original qty with.
   - **authentication**: For Binance Futures: use the Code 'ALPHA'. For Bybit: Go to your Bybit account and copy your UID, then Direct Message @CryptoGnome#7769 to be added to the auth server - you must use CryptoGnome's link to create the Bybit account!
   - **discordWebhook**: POST NOTIFICATIONS TO DISCORD CHANNEL, ENTER THE WEBHOOK ADDRESS FROM CHANNEL SETTINGS HERE. You mus make a new discord server for your self, make a channel, right click the channel and copy the webhook address to paste below.
 
 **varPairs Settings:**
-  - **botName**: name for your bot [LHP001]
-  - **maxPositions**: Maximum orders you want to have open at the same time [3] 
+  - **botName**: name for your bot. [LHP001]
+  - **maxPositions**: Maximum orders you want to have open at the same time. [3] 
   - **maxPairs**: Maximum pairs you want to trade, always the top of the chart is used [8]
-  - **openOrderIsolationPercentage**: "10" Only trade open order pairs when X percentage of wallet balance is reached
-  - **tradingMode**: Choose a mode to base match your pairs. Modes: 1. staticPairs 2. whitelist 3. tradingAge
-  - **staticPairs**: Trade only the pairs you want to trade
-  - **whitelist**: Set your personal whitelist of pairs you want to be able to trade
-  - **tradingAge**: All coins below trading age will not be traded
-  - **blacklist**: You can blacklist coins that are above your trading age, so they won't be traded
-  - **tradePairs**: "1" Choose 1, 2, 3 or 4, depending what chart your wan't to base your pairs on (1. Top 10 burned by Volume - 24h, 2. Top 10 by Liq-Events - 24h, 3. Average Liq-Volume in USD - 24h, 4. Average Liq-Amount - 24h)
-  - **fundingRateThreshold**: true or false, default is false, set to true if you don't want to trade pairs with a high Funding Rate
-  - **maxFundingRate**: For explanation about funding rate you can read this https://www.binance.com/en/support/faq/360033525031  
+  - **openOrderIsolationPercentage**: Only trade open order pairs when X percentage of wallet balance is reached. [10]
+  - **tradingMode**: Choose a mode to base match your pairs. Modes: 1. staticPairs 2. whitelist 3. tradingAge. [1]
+  - **staticPairs**: Trade only the pairs you want to trade.
+  - **whitelist**: Set your personal whitelist of pairs you want to be able to trade.
+  - **tradingAge**: All coins below trading age will not be traded. [14]
+  - **blacklist**: You can blacklist coins that are that are higher than your trading age, so they won't be traded.
+  - **tradePairs**: Choose 1, 2, 3 or 4, depending what chart your want to base your pairs on (1. Top 10 burned by Volume - 24h, 2. Top 10 by Liq-Events - 24h, 3. Average Liq-Volume in USD - 24h, 4. Average Liq-Amount - 24h). [1]
+  - **fundingRateThreshold**: true or false, default is false, set to true if you don't want to trade pairs with a high Funding Rate. [false]
+  - **maxFundingRate**: For explanation about funding rate you can read go [here](https://www.binance.com/en/support/faq/360033525031)
   - **tradingEnabled**: if unchecked, will not run WebSocket process.
-  - **refreshTime**: the interval for script getting new values for coins.json. Avoid setting it too low (default: 15).
-
+  - **refreshTime**: interval at which the script will poll for new values for coins.json. Avoid setting it too low (default: 15).
 
 ## Troubleshooting
 
