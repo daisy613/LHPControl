@@ -11,6 +11,7 @@
 
 ## Features
 
+* **Multiple bots:** Supports running multiple bots side by side! Just drop LHPC into the root of each bot and change the bot name in settings.
 * **Dynamic liquidation stats analysis:** LHPC queries and analyses the current liquidation streams (from liquidationsniper.com) and updates the coins file with coins with most profitable liquidation statistics. Four different types of liquidation stats are available to chose.
 * **Trading Modes:** trade either with 1) a static list of coins you have manually created, 2) a custom whitelist and the liquidation stats analysis, or 3) a custom blacklist and the liquidation stats analysis, including the ability to restrict the coins based on their trading age.
 * **New coins sync:** when new coins become available, they are automatically added to the list of available coins.
