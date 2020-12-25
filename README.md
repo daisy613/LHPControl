@@ -44,8 +44,8 @@
 
 ## Installation
 
-* Install the latest version of [LickHunterPro](https://github.com/CryptoGnome/LickHunterPRO/releases/latest).
-* [Download](https://github.com/daisy613/LHPControl/releases/latest) and place the latest LHPC.exe in the root of the LickHunterPro folder (Example: C:\LickHunterPro\).
+* Install the latest version of [LickHunterPro](https://github.com/CryptoGnome/LickHunterPRO/releases/latest) into **a new folder** (Example: C:\BOTS\LHP001\).
+* [Download](https://github.com/daisy613/LHPControl/releases/latest) the latest LHPC.exe and place in the root of the LickHunterPro folder.
 * Run LHPC.exe
 
 ## Usage
