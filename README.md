@@ -25,7 +25,7 @@
 * **DebugDump:** debug information can be generated for your issue submissions. No personal information like keys or secrets is generated.
 * **Clear coin list:** the list of available coins is displayed with all the currently trading coins in black and disabled coins in gray. Click on the coin to customize its settings.
 * **Bulk coin updates:** Update all coins at the same time with the same settings.
-* **GeoIP:** Displays your geo IP information and warns you if your IP is US-based.
+* **GeoIP:** Displays your geo IP information and warns you if your IP is US-based. You can use an IP webproxy to mask your IP. Get one [here](https://www.webshare.io/?referral_code=wn3nlqpeqog7).
 * **Default settings:** if the bot root directory does not contain any settings files, creates them with default settings.
 * **CPU/Memory stats:** displays the current processor and memory utilisation per each process.
 
