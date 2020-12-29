@@ -68,8 +68,8 @@
 
 **varPairs Settings:**
   - **botName**: name for your bot. [LHP001]
-  - **maxOpen**: Maximum orders you want to have open at the same time. [3] 
-  - **maxPairs**: Maximum pairs you want to trade, always the top of the chart is used [8]
+  - **maxOpen**: Maximum orders you want to have open at the same time. (only applies to trademode 2/3) [3] 
+  - **maxPairs**: Maximum pairs you want to trade, always the top of the chart is used. (only applies to trademode 2/3) [8]
   - **openOrderIsolationPercentage**: Only trade open order pairs when X percentage of wallet balance is reached. [10]
   - **tradingMode**: Choose a mode to base match your pairs. Modes: 1. staticPairs 2. whitelist 3. tradingAge. [1]
   - **staticPairs**: Trade only the pairs you want to trade.
