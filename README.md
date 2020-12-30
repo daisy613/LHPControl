@@ -1,6 +1,6 @@
 # LHPControl
 
-![LHCP](https://i.ibb.co/kJPFwxz/LHPC-screens.png)
+![LHCP](https://i.imgur.com/rdnSo79.png)
 
 ## Description
 
@@ -19,6 +19,7 @@
 * **Current pairs:** displays the list of trading pairs selected by the algorithm (coins.json).
 * **Isolation Percentage Mode:** Open Order Isolation Percentage mode allows you to specify the margin wallet percentage at which the bot should stop opening new orders and only manage the currently opened ones.
 * **Maximum open orders:** you can specify the maximum number of open orders after which the bot will enter the aforementioned Isolation mode.
+* **Automatic Trading Mode**: LHPC sets all pairs to Isolated trading mode on Binance automaatically!
 * **Log monitoring:** the current logs are displayed and separated into Output and Error logs for Profit and Websocket processes, similar to the PM2 Monitor dashboard, which can also be opened at a click of a button.
 * **Settings backup:** backs up the settings.json file when settings change.
 * **Upgrade checking:** LHPC checks for an available upgrade when it starts and allows you to download an upgrade.
