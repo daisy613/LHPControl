@@ -33,7 +33,6 @@
 ### Coming features:
 
 * Bybit trading.
-* Automatically update coins from Cross to Isolated mode.
 * Remove delisted coins.
 * Download recent trading history.
 * Display today's Profit&Loss stats.
