@@ -7,7 +7,6 @@
 * LHPControl app adds a beautiful GUI and additional variable pair logic to @cryptognome's LickHunterPro bot.
 * It is a front-end Windows app for CryptoGnome's LickHunterPro bot. It is based on @Doojenever's variable pairs script and includes many new features. Sanduckchan created charts based on the Binance Futures liquidations (http://www.lickhunter.com/data). The script fetches the pairs from the site and places them in the coins.json along with the current open orders. It adds logic for various static/white/blacklists, as well as ability to automatically stop new trading if certain thresholds are reached.
 * It is a single drop and run executable.
-* **NOTE: Bybit is not currently supported, but it's coming with the next release.**
 
 ## Features
 
@@ -33,7 +32,6 @@
 
 ### Coming features:
 
-* Bybit trading.
 * Download recent trading history.
 * Display today's Profit&Loss stats.
 * Dynamic lickValue and offsets per coin.
