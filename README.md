@@ -1,6 +1,6 @@
 # LHPControl
 
-![LHCP](https://i.imgur.com/rdnSo79.png)
+![LHCP](https://i.imgur.com/Jt4mwWC.png)
 
 ## Description
 
@@ -33,7 +33,6 @@
 ### Coming features:
 
 * Download recent trading history.
-* Display today's Profit&Loss stats.
 * Dynamic lickValue and offsets per coin.
 * Send email alerts to user when errors appear in error logs.
 * Custom profiles.
