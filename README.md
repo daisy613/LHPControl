@@ -29,6 +29,9 @@
 * **GeoIP:** Displays your geo IP information and warns you if your IP is US-based. You can use an IP webproxy to mask your IP. Get one [here](https://www.webshare.io/?referral_code=wn3nlqpeqog7).
 * **Default settings:** if the bot root directory does not contain any settings files, creates them with default settings.
 * **CPU/Memory stats:** displays the current processor and memory utilisation per each process.
+* **Automatic change of marginType:** Select the margin type you want to assign to your coins - Isolated or Cross
+* **Today's and Overall PnL:** displays your profits and percentages.
+* **Export My Setting:** Export your settings in a concise way to show on the chats.
 
 ### Coming features:
 
@@ -39,9 +42,67 @@
 * Remote access.
 * Integrate P&L tracker.
 
-## Installation instructions:
+## Installation
 
-[Click here for instructions wiki](https://github.com/daisy613/LHPControl/wiki)
+* Install the latest version of [LickHunterPro](https://github.com/CryptoGnome/LickHunterPRO/releases/latest) into **a new folder** (Example: C:\BOTS\LHP001\).
+* [Download](https://github.com/daisy613/LHPControl/releases/latest) the latest LHPC.exe and place in the root of the LickHunterPro folder.
+* Run LHPC.exe
+* If the executable doesn't start, right-click > Properties, and checkmark Unblock.
+* On Windows 8 and Server 2012 you need to install Powershell 5 to run LHPC.
+
+## Usage
+
+### Variables
+
+**Bot Settings:** (for up to date information on the bot, go to [LickHunterPro wiki](http://www.lickhunter.com/wiki/))
+  - **key, secret**: This is where you enter your API KEYS from your exchange of choice, make sure that you enable trading & enable futures if you are using binance.
+  - **auto_qty**: Toggle this True/False to enable automatic position sizing based on your balance.
+  - **percentbal**: Use a percentage value here to be used the auto_qty setting, this will tell the bot how much of your balance to use for each buy. Ths bot can be very aggressive on big moves so you want to make sure you account for a multitude of buys/sells to come through at any given time, we recommend using a value of less the 0.25 here, higher than that is considered VERY AGGRESSIVE if you would like to run more conservative lower this value.
+  - **maxPosition**: This is the maximum position you want the bot to build in %, this is good to use if you want to prevent your bot from using your entire account on one position for risk management or if you run multiple bots on that account.
+  - **longQty & shortQty**: If auto_qty is set to False, override value goes here. Otherwise ignore these settings - this is for the user who wants to set an exact qty of their buys and sells. This value is a percentage of your balance.
+  - **VWAP offsets**: This is where you set the bot price offsets, based on percentage values away from LickHunters proprietary VWAP. The bot will only look to enter positions when price is ranging outside of these values & there is a liquidation on the traded coin.
+  - **leverage**: Set this on exchange to ISOLATED then make it match below to help calculate order sizing. Suggested leverage for this bot is 3-5x, please note with higher leverage this bot becomes more risky.
+  - **lickValue**: Set this to the size of liquidations you want to hunt for. This will always be a $USD value.
+  - **takeProfit & stopLoss**: Take Profit & Stop Loss Values, these values are a percentage % and are based off your average entry price. Please Adjust to your risk levels. Take Profit is a LIMIT - REDUCE ONLY ORDER. STOP LOSS is a active MARKET ORDER that is not placed in the books. To disable set the Stop Loss amount at a high value.
+  - **DCA**: Dollar Cost Averaging: This allows the bot to view the bots draw down when in an open position and adjust the buy qty in REALTIME when there is a liquidation. There are two things this looks at, one your current level, ex: levelOne = 2. This is a percent value, if your position is less than this it will use the autoQty value to make a buy/sell on liquidation. If it is past this value, lets say the position -2.5% away from your average entry it will then use multiplierOne value and multiple you autoQty value by this. So lets say your normal buy was 100 contracts, your multiplierOne = 2, your new buy value would be 200 contracts. So to recap, your level is % value away from your average entry in drawdown that it will activate a higher order size. Your multiplier is the value you multiple your original qty with.
+  - **authentication**: For Binance Futures: use the Code 'ALPHA'. For Bybit: Go to your Bybit account and copy your UID, then Direct Message @CryptoGnome#7769 to be added to the auth server - you must use CryptoGnome's link to create the Bybit account!
+  - **discordWebhook**: POST NOTIFICATIONS TO DISCORD CHANNEL, ENTER THE WEBHOOK ADDRESS FROM CHANNEL SETTINGS HERE. You mus make a new discord server for your self, make a channel, right click the channel and copy the webhook address to paste below.
+
+**varPairs Settings:**
+  - **botName**: name for your bot. [LHP001]
+  - **maxOpen**: Maximum orders you want to have open at the same time. (only applies to trademode 2/3) [3] 
+  - **maxPairs**: Maximum pairs you want to trade, always the top of the chart is used. (only applies to trademode 2/3) [8]
+  - **openOrderIsolationPercentage**: Only trade open order pairs when X percentage of wallet balance is reached. [10]
+  - **tradingMode**: Choose a mode to base match your pairs. Modes: 1. staticPairs 2. whitelist 3. tradingAge. [1]
+  - **staticPairs**: Trade only the pairs you want to trade.
+  - **whitelist**: Set your personal whitelist of pairs you want to be able to trade.
+  - **tradingAge**: All coins below trading age will not be traded, in days. [14]
+  - **blacklist**: You can blacklist coins that are that are higher than your trading age, so they won't be traded.
+  - **tradePairs**: Choose 1, 2, 3 or 4, depending what chart your want to base your pairs on (1. Top 10 burned by Volume - 24h, 2. Top 10 by Liq-Events - 24h, 3. Average Liq-Volume in USD - 24h, 4. Average Liq-Amount - 24h). [1]
+  - **fundingRateThreshold**: true or false, default is false, set to true if you don't want to trade pairs with a high Funding Rate. [false]
+  - **maxFundingRate**: For explanation about funding rate you can read go [here](https://www.binance.com/en/support/faq/360033525031)
+  - **marginType**: Assign Isolated or Cross margin to your coins.
+  - **refreshTime**: interval in secs at which the script will poll for new values for coins.json. Avoid setting it too low (default: 15).
+
+
+## Troubleshooting
+
+Try the following methods:
+* Start fresh:
+    * Stop all currently running bots and kill any related processes in Task Manager.
+    * Get a fresh instance of [LickHunterPro](https://github.com/CryptoGnome/LickHunterPRO/releases/latest)
+    * Place it into **a new folder** (Example: C:\BOTS\LHP001\).
+    * Make sure there are **no JSON files** in the folder.\
+    * Place the [latest LHPC](https://github.com/daisy613/LHPControl/releases/latest) executable in the root of the folder.
+* Update PM2:
+    * pm2 save
+    * npm install pm2 -g
+    * pm2 update
+* Reboot your PC and try to run LHPC.
+* If you still have an issue:
+    * Create a debugData file by clicking on the debugData button.
+    * Submit the details to [LHPC Issues](https://github.com/daisy613/LHPControl/issues). Please include your debugData.txt file that you generated earlier.
+
 
 ## Donations
 
